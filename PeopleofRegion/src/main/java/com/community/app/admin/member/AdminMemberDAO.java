@@ -8,6 +8,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+/*
+ * 관리자 회원 데이터베이스 어댑터 오브젝트
+ * 201911695 한설
+ * */
 @Component
 public class AdminMemberDAO {
 	@Autowired
@@ -16,6 +20,7 @@ public class AdminMemberDAO {
 	@Autowired
 	PasswordEncoder passwordEncoder;
 	
+	// 이미 존재하는 계정인지 확인
 	public boolean isAdminMember(String a_m_id) {
 		System.out.println("[AdminMemberDao] isAdminMember()");
 		
@@ -27,6 +32,7 @@ public class AdminMemberDAO {
 		else return false;
 	}
 	
+	// 데이터베이스에 관리자 멤버 삽입
 	public int insertAdminMember(AdminMemberVO adminMemberVO) {
 		System.out.println("[AdmionMemberDAO] insertAdminMember()");
 		

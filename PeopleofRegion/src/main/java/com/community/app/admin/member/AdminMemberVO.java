@@ -1,5 +1,8 @@
 package com.community.app.admin.member;
 
+/*
+ * 관리자 회원 정보 객체
+ */
 public class AdminMemberVO {
 	int a_m_no; 	// 식별번호
 	int a_m_approval; // 승인 여부
